@@ -1,10 +1,6 @@
+import re
+from collections import Counter
+
 def count_words(sentence):
-    counts = dict()
-    words = sentence.lower().replace('\n', ' ').replace(',', ' ').replace('_', ' ').replace("!!&@$%^&", "")\
-        .replace(':', '').replace('.', '').replace('"', '').split()
-    for word in words:
-        if word in counts:
-            counts[word] += 1
-        else:
-            counts[word] = 1
-    return counts
+    res = sentence.replace("\n", "").lower()
+    return Counter(re.findall(r"[a-z0-9]+(?:'[a-z]+)?", res))

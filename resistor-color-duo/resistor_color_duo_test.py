@@ -19,7 +19,7 @@ class ResistorColorDuoTest(unittest.TestCase):
         self.assertEqual(value(["orange", "orange"]), 33)
 
     def test_ignore_additional_colors(self):
-        self.assertEqual(value(["green", "brown", "orange"]), 513)
+        self.assertEqual(value(["green", "brown", "orange"]), 51)
 
 
 if __name__ == "__main__":

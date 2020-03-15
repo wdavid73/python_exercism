@@ -16,17 +16,4 @@ def color_code(color):
 
 
 def colors():
-    rainbow_color = [
-        "black",
-        "brown",
-        "red",
-        "orange",
-        "yellow",
-        "green",
-        "blue",
-        "violet",
-        "grey",
-        "white",
-    ]
-    return rainbow_color
-
+    return list(list_colors.keys())
